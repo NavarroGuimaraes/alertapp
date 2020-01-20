@@ -1,0 +1,20 @@
+<h2>Detalhes do aviso</h2>
+
+<hr/>
+<div *ngIf="alert">
+  <div>
+    <label><b>Título: </b></label> {{alert.title}}
+  </div>
+  <div>
+      <label><b>Descrição: </b></label> {{alert.description}}
+  </div>
+  <div>
+      <label><b>Criado em: </b></label> {{alert.createdAt | date:'dd/MM/yyyy HH:mm:ss'}}
+  </div>
+  <div>
+      <label><b>Visto em: </b></label> {{alert.seenAt | date:'dd/MM/yyyy HH:mm:ss'}}
+  </div>
+</div>
+<br>
+<br>
+<button (click)="listAlerts()" class="btn btn-primary">Voltar para lista de avisos</button>

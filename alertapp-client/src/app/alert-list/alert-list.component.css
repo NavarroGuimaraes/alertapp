@@ -1,0 +1,26 @@
+.alert-table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.invisible-button{
+  border: none !important;
+  background: transparent;
+}
+
+#delete-button{
+  display: inline-block;
+  vertical-align: middle;
+  background: transparent;
+  border: none;
+  color: transparent;
+  margin-left: 5px;
+
+}
+
+#delete-button svg {
+  width: 30px;
+  height: 25px;
+  display: inline-block;
+  vertical-align: middle;
+}

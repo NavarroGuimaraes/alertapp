@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <!-- Links -->
+    <ul class="navbar-nav" style="height: 50px;">
+      <li class="nav-item">
+          <a routerLink="alerts" id="lista-avisos" class="nav-link" routerLinkActive="active" href="#">
+            <svg>
+              <rect></rect>
+            </svg>  
+            Lista de avisos
+          </a>
+      </li>
+      <li class="nav-item">
+        <!-- this was created with the help of the internet :) -->  
+        <a routerLink="add" class="nav-link" id="adicionar-aviso" routerLinkActive="active" href="#">
+            <svg>
+              <rect></rect>
+            </svg>
+            Adicionar Aviso
+          </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <br>
+    <h2 style="text-align: center;">{{title}}</h2>
+    <hr>  
+    <div class="card">
+      <div class="card-body">
+        <div *ngFor="let item of pageOfItems">{{item.name}}</div>
+      </div>
+      <div class="card-footer pb-0 pt-3">
+          <jw-pagination [items]="items" (changePage)="onChangePage($event)"></jw-pagination>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>

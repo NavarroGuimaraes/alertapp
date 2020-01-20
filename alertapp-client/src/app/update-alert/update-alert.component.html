@@ -1,0 +1,24 @@
+<h3>Alterar aviso</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="title">Título</label>
+      <input type="text" 
+      class="form-control" 
+      id="title"
+      required [(ngModel)]="alert.title"
+      name="title">
+    </div>
+
+    <div class="form-group">
+      <label for="description">Descrição</label>
+      <input type="text" 
+      class="form-control" 
+      id="description"
+      required [(ngModel)]="alert.description"
+      name="description">
+    </div>
+
+    <button type="submit" class="btn btn-success">Salvar</button>
+  </form>
+</div>
