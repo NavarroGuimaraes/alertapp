@@ -2,7 +2,8 @@
 
 # Runing the app 
 
-To run this app in the dev server, firstm you must go to the client folder (`alertapp-client`) in the command-line. Then, run the command `npm update`. When it finishes, you'll be able to run the dev server with the following command: `ng serve`. 
+To run this app in the dev server, first you must go to the client folder (`alertapp-client`) in the command-line.   
+Then, run the command `npm update`. When it finishes, you'll be able to run the dev server with the following command: `ng serve`.  
 The url to access the app will be `http://localhost:4200/`. Changes will be automatically detected and the page will reload after each change.
 
 # Runing the API 
