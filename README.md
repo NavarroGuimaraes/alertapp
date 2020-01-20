@@ -2,7 +2,7 @@
 
 # Runing the app 
 
-To run this app in the dev server, go to the client folder (where the files are located) in the command-line and run `ng serve`. 
+To run this app in the dev server, go to the client folder (`alertapp-client`) in the command-line and run `ng serve`. 
 The url to access the app will be `http://localhost:4200/`. Changes will be automatically detected and the page will reload after each change.
 
 # Runing the API 
