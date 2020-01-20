@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AlertListComponent implements OnInit {
   alerts: Observable<Alert[]>
+  isDeleting = false;
   constructor(private alertService: AlertService, private router: Router) { 
 
   }
@@ -26,10 +27,12 @@ export class AlertListComponent implements OnInit {
   }
 
   deleteAlert(id: number){
+    this.isDeleting = true;
     this.alertService.deleteAlert(id)
         .subscribe(
             data => {
               console.log(data);
+              this.isDeleting = false;
               this.reloadAlerts();
         }, 
         error => console.log(error));

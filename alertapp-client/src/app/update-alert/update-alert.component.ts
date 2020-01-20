@@ -11,6 +11,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class UpdateAlertComponent implements OnInit {
   id: number;
   alert: Alert;
+  submitted = false;
+  isLoaded = false;
 
   constructor(private alertService: AlertService
     , private router: Router
@@ -18,18 +20,22 @@ export class UpdateAlertComponent implements OnInit {
 
   ngOnInit() {
     this.alert = new Alert();
+    this.submitted = false;
+    this.isLoaded = false;
     this.id = this.route.snapshot.params['id'];
 
     this.alertService.getAlert(this.id)
       .subscribe(
         data => {console.log(data),
         this.alert = data;
+        this.isLoaded = true;
       },
       error => console.log(error)
       );
   }
 
   onSubmit() {
+    this.submitted = true;
     this.updateAlert();
   }
 

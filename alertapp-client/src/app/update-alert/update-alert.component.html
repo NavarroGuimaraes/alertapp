@@ -1,5 +1,8 @@
 <h3>Alterar aviso</h3>
-<div [hidden]="submitted" style="width: 400px;">
+<div [hidden]="isLoaded">
+  <h5>Carregando os dados...</h5>
+</div>
+<div [hidden]="!isLoaded" style="width: 400px;">
   <form (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="title">Título</label>
@@ -21,4 +24,8 @@
 
     <button type="submit" class="btn btn-success">Salvar</button>
   </form>
+</div>
+<div [hidden]="!submitted">
+  <h4>Salvando dados... você será redirecionado
+  </h4>
 </div>

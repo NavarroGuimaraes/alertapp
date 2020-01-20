@@ -11,7 +11,6 @@ import { AlertService } from '../alert.service';
 export class CreateAlertComponent implements OnInit {
   alert: Alert = new Alert();
   submitted = false;
-  isMessageVisible = false;
   constructor(private alertService: AlertService
     , private router: Router) {
 
@@ -27,7 +26,6 @@ export class CreateAlertComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.isMessageVisible = true;
     this.save();
   }
 
